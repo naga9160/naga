@@ -1,0 +1,39 @@
+#header {
+    height: 15%;
+    background-color: rgb(31, 209, 111);
+    color: sienna;
+   text-align: center;
+ 
+   padding: 20;
+}
+#main {
+    height: 80%;
+   
+    color: tomato;
+    display: flex;
+    
+    
+}
+#footer {
+    height: 5;
+    background-color: violet;
+    color: brown;
+    display: flex;
+} 
+.nav {
+    background-color:lightgrey;
+    width: 30%;
+    color: orangered;
+   
+   
+
+}
+.content {
+    background-color:wheat;
+    width: 70%;
+    color: orchid;
+  
+}
+   
+
+    
