@@ -1,0 +1,40 @@
+#header { height: 10%;
+    background-color:slategrey;
+    
+    text-align: center;
+    color: tomato;
+    padding: 2%;
+    
+}
+#main { height: 75%;
+    background-color: whitesmoke;
+    margin: 0%;
+    display: flex;
+    
+}
+#footer { height: 15%;
+    background-color: brown;
+    display: flex;
+
+}
+.nav {
+    width: 30%;
+    background-color:chartreuse;
+    color:red;
+}
+.content {
+    width: 70%;
+
+}
+table {
+    border: 3px solid red;
+    width: 500px;
+}
+tr {
+    
+}
+td {
+    text-align: center;
+    border: 1px solid violet;
+    background-color: turquoise;
+}
