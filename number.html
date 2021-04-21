@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even Number</title>
+</head>
+<body style="background-color:burlywood;">
+    <form >
+    <h1 style="color: blue;">find Even Number && Odd Number</h1>
+    <label>Enter Number</label>
+    <input type="number" name="" id="oddeven" onkeyup="isCheck()">
+    <span id="show"></span>
+    <script>
+        function isCheck(){
+            var num = document.getElementById('oddeven').value;
+            
+            if((num % 2)=== 0){
+                document.getElementById('show').innerHTML = "Number '"+num+" is an even number";
+            }
+            else{  document.getElementById('show').innerHTML = " Number '"+num+" is an odd number ";
+
+            }
+            if(num == ""){
+                document.getElementById('show').innerHTML ="";
+            }
+        }
+    </script>
+    </form>
+</body>
+</html>
