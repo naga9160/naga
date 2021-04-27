@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            form{
+                background-color: brown;
+                max-width: 400px;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+            }
+        </style>
+        <title></title>
+    </head>
+    <body style="background-image: url(./math.jpg);">
+        <form >
+            <div>
+                <label>Enter Number</label>
+                <input type="number" name="" id="prime">
+            </div>
+            <br>
+            <div>
+                <button onclick="primeNumber()">submit</button>
+            </div>
+            <div>
+                <label >output</label>
+                <input type="text" name="" disabled id="res">
+            </div>
+       
+        </form>
+        <script>
+            function primeNumber(){
+                var num, i, flag = true;
+                num =parseInt(document.getElementById("prime").value);
+                for ( i=2; i<=num; i++)
+                    if(num%i==0){
+                        flag = false;
+                        break;
+                    }
+                    if (flag == true){
+                        console.log(num+ "is prime");
+                        output = "it is prime Number";
+                        document.getElementById('res').value = output;
+                    }else{
+                        console.log(num+"is not prime");
+                        output = "it is not prime Number";
+                        document.getElementById('res').value = output;
+                    }
+                    return false;
+                    
+                    
+                    }
+                
+           
+                
+        </script>
+    </body>
+</html>
