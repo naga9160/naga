@@ -1,0 +1,59 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <title>Sand Ganesh</title>
+<style>
+    
+    .ganesh{
+       width: 350px;
+       height: 400px;
+       margin: auto;
+       position: relative;
+       overflow: hidden;
+       border: 10px solid rgb(153, 51, 51);
+       
+    }
+    .ganesh img{
+
+          width: inherit;
+          height: inherit;
+        
+    }
+    .content{
+        padding: 5px;
+        background-color: rgb(151, 84, 36);
+        box-shadow: 0 5px 10px gray;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -20px;
+        display: flex;
+        flex-direction: column;
+         box-sizing: border-box; 
+         transform:perspective(400px) rotatey(0deg); 
+        transform-origin: left;
+        transition: all 0.5s;
+       
+    }
+    .content:hover{
+        transform: perspective(400px) rotatey(90deg);
+    }
+</style>
+    </head>
+    <body>
+        
+            <div class="ganesh">
+            <img src="./img/ganesh.jpeg"/>
+            
+            <h1 class="content">
+            <span style="color: rgb(12, 12, 12);background-color: rgb(22, 243, 22);">Made By</span><hr/>
+            <span style="color: seagreen;background-color: honeydew;">Nikhitha</span><hr/>
+            <span style="color: red;background-color: honeydew;">Harshith</span><hr/>
+            <span style="color: seagreen;background-color: honeydew;">Sowmya</span><hr/>
+            <span style="color: red;background-color: honeydew;">Donu</span><hr/>
+            <span style="color: rgb(208, 255, 0);background-color: honeydew;">Designed By Me</span><hr/>
+            </h1>
+        </div>
+        
+    </body>
+</html>
