@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">Stop Watch</a>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6 m-auto">
+               
+                <div class="card">
+                    <div class="card-header bg-primary text-center text-white">
+                        <h3 > STOP WATCH</h3>
+                    </div>
+                    <div class="card-body text-center">
+                      <h1 class="display-3">
+                       <span id='minutes'>00</span>:
+                       <span id="seconds">00</span>:
+                       <span id="m-seconds">00</span>
+                      </h1>
+                      <button class="btn btn-success m-3" id="start-btn">START</button>
+                      <button class="btn btn-danger m-4" id="stop-btn">STOP</button>
+                      <button class="btn btn-warning m-4" id="reset-btn">RESET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        //start timmer
+        let count = 0;
+        let  minutes =0;
+        let seconds =0;
+        let  milliSeconds =0;
+
+        let interval = 0;
+        let timerRunning = false;
+
+        //start timer
+        let startTimer=()=>{
+            count++;
+            minutes = Math.floor((count/100/60));
+            seconds = Math.floor((count/100)-(minutes*60));
+            milliSeconds = Math.floor(count-(seconds*100)-(minutes*6000))
+
+            document.querySelector('#minutes').innerHTML= leadingZero(minutes);
+            document.querySelector('#seconds').innerHTML=leadingZero(seconds);
+            document.querySelector('#m-seconds').innerHTML=leadingZero(milliSeconds);
+        };
+
+//start button
+
+let startButton = document.querySelector('#start-btn');
+startButton.addEventListener('click',function(){
+    // interval = setInterval(startTimer,10);
+ if(!timerRunning){
+    interval = setInterval(startTimer,10);
+    timerRunning= true;
+ }
+
+})
+
+//leading Zero
+let leadingZero = (time)=>{
+    if(time<=9){
+        return '0'+time;
+    }
+    else{
+        return time;
+    }
+}
+
+//stop  js has clearInterval
+let stopButton = document.querySelector('#stop-btn')
+stopButton.addEventListener('click',function(){
+    clearInterval(interval); //stop the timmer
+});
+
+//Reset
+let resetButton = document.querySelector('#reset-btn')
+resetButton.addEventListener('click',function(){
+clearInterval(interval) //stop the timer
+        count = 0;
+        minutes =0;
+        seconds =0;
+        milliSeconds =0;
+        interval = 0;
+        timerRunning = false;
+
+ document.querySelector('#minutes').innerHTML= '00';
+ document.querySelector('#seconds').innerHTML='00'
+ document.querySelector('#m-seconds').innerHTML='00'
+});
+    </script>
+</body>
+</html>
